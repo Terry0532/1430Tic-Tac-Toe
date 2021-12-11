@@ -7,17 +7,30 @@
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-    <div class="board">
-      <div id="s1" class="square"></div>
-      <div id="s2" class="square"></div>
-      <div id="s3" class="square"></div>
-      <div id="s4" class="square"></div>
-      <div id="s5" class="square"></div>
-      <div id="s6" class="square"></div>
-      <div id="s7" class="square"></div>
-      <div id="s8" class="square"></div>
-      <div id="s9" class="square"></div>
+    <div class="container">
+      <label for="player1" id="label1">Player 1 enter your name:</label>
+      <input type="text" id="player1" name="player1" />
+      <button onclick="player1name()" id="button1">enter</button>
+      <label for="player2" class="hide" id="label2"
+        >Player 2 enter your name:</label
+      >
+      <input type="text" id="player2" name="player2" class="hide" />
+      <button onclick="player2name()" class="hide" id="button2">enter</button>
+      <div class="board hide" id="board">
+        <div id="s0" class="square" onclick="game(this.id)"></div>
+        <div id="s1" class="square" onclick="game(this.id)"></div>
+        <div id="s2" class="square" onclick="game(this.id)"></div>
+        <div id="s3" class="square" onclick="game(this.id)"></div>
+        <div id="s4" class="square" onclick="game(this.id)"></div>
+        <div id="s5" class="square" onclick="game(this.id)"></div>
+        <div id="s6" class="square" onclick="game(this.id)"></div>
+        <div id="s7" class="square" onclick="game(this.id)"></div>
+        <div id="s8" class="square" onclick="game(this.id)"></div>
+      </div>
+      <button onclick="resetgame()" class="hide" id="resetbutton">Reset</button>
+      <div id="message"></div>
     </div>
     <script src="js/script.js"></script>
   </body>
